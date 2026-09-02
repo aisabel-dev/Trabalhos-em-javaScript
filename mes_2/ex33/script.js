@@ -6,7 +6,7 @@ async function buscarCep(cep){
 
 		const dados = await resposta.json();
 
-		console.log(dados);
+		console.log("rua: "+dados.logradouro +",\n" + "bairro: " +dados.bairro + ", \n" + "cidade: " + dados.localidade + ", \n" + "estado: " +dados.uf);
 	}catch(erro){
 
 
