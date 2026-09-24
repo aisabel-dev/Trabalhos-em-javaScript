@@ -1,3 +1,5 @@
+// Moeda de convercao
+
 async function buscarMoney(moeda){
 
 	try{
@@ -8,13 +10,26 @@ async function buscarMoney(moeda){
 
 		return {
 
-			dolar: dados.USDBRL.name,
-			usdcotacao: dados.USDBRL.bid,
-			euro:dados.EURBRL.name,
-			eurocotacao: dados.EURBRL.bid,
-			bitcon: dados.BTCBRL.name,
-			btccotacao: dados.BTCBRL.bid
-			}
+			dolar:
+			{
+
+				nome:dados.USDBRL.name,
+				cotacao: dados.USDBRL.bid
+			},
+
+			euro:
+			{
+				nome:dados.EURBRL.name,
+				cotacao: dados.EURBRL.bid
+			},
+
+			bitcon:
+			{ 
+				nome:dados.BTCBRL.name,
+				cotacao: dados.BTCBRL.bid
+			},
+		}
+
 	}catch(erro){
 
 		console.log("Tente novamente!")
